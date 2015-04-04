@@ -1,2 +1,3 @@
 # codepractice.io
-Algorithm and their Java Implementation
+* C++ Smart Pointer usage.
+* Algorithm and their Java Implementation
