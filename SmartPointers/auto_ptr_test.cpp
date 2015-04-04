@@ -45,8 +45,8 @@ int main(int argc, char** argv) {
   std::cout << "p2 pointer address : " << p2.get() << std::endl;
   
   // Take back the ownership from p2.  
-  Foo* temp = p2.release();
-  std::cout << "temp pointer address after taking ownership : " << temp << std::endl;
+  Foo* temp1 = p2.release();
+  std::cout << "temp1 pointer address after taking ownership : " << temp1 << std::endl;
   
   // After resetting Foo Dtor should be called and new
   // instance should be assigned.
@@ -60,11 +60,23 @@ int main(int argc, char** argv) {
     std::auto_ptr<Bar> p3(new Bar);
   }
   
+  Foo* temp2 = p2.get();
+
+  // this will not release ownership, both temp_ptr and p2 hold the reference to
+  // memory.
+  std::cout << "temp2 pointer address : " << temp2 << std::endl;
+  std::cout << "p2 pointer address : " << p2.get() << std::endl;
+
   p2->Release(p2);
   
   // Since ownership is already passed to Release methods
-  // suto_ptr, therefore this should result in NULL.
+  // auto_ptr, therefore this should result in NULL.
   std::cout << "p2 pointer address : " << p2.get() << std::endl;
-      
+
+  // Check if raw pointers released memory or not, even though auto_ptr released
+  // memory, raw pointers still hold the reference to it. 
+  std::cout << "temp1 raw pointer address : " << temp1 << std::endl;
+  std::cout << "temp2 raw pointer address : " << temp2 << std::endl;
+
   return 0;  
 }
