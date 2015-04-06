@@ -47,6 +47,7 @@ int main(int argc, char** argv) {
   // Take back the ownership from p2.  
   Foo* temp1 = p2.release();
   std::cout << "temp1 pointer address after taking ownership : " << temp1 << std::endl;
+  std::cout << "p2 pointer address after release operation : " << p2.get() << std::endl;
   
   // After resetting Foo Dtor should be called and new
   // instance should be assigned.
