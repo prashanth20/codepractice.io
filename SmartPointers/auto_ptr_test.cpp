@@ -79,5 +79,15 @@ int main(int argc, char** argv) {
   std::cout << "temp1 raw pointer address : " << temp1 << std::endl;
   std::cout << "temp2 raw pointer address : " << temp2 << std::endl;
 
+  // For eg: 
+  //  class X
+  // {
+  // };
+
+  // std::vector<std::auto_ptr<X> > vecX;
+  // vecX.push_back(new X);
+  // std::auto_ptr<X> pX = vecX[0];  // after this operation vecX[0] is 
+  // assigned NULL.
+
   return 0;  
 }
