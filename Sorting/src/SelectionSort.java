@@ -11,7 +11,7 @@ public class SelectionSort {
     Selection sort Algorithm works as follows:
     In this sorting algorithm, we first scan through entire array and find the smallest element
     in the array, then we replace the smallest element with the first element. The process
-    continues till we position, which are all in the proper position.
+    continues till all elements are in correct position.
     */
     private void sort(int[] array) {
         for (int i = 0; i < array.length - 1; i++) {
