@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * Created by PrashantH on 18-May-15.
  */
@@ -30,8 +32,6 @@ public class BubbleSort {
     }
 
     private void printSortedArray(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
-        }
+        System.out.println(Arrays.toString(array));
     }
 }

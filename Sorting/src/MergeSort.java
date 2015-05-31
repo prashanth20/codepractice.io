@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * Created by PrashantH on 28-May-15.
  */
@@ -17,7 +19,7 @@ public class MergeSort {
     element. While merging it sorts two parts, and places them sorted array.
     This process continues until all the divided parts are merged.
      */
-    
+
     public MergeSort(int[] array) {
         m_array = array;
     }
@@ -62,8 +64,6 @@ public class MergeSort {
     }
 
     private void printSortedArray() {
-        for (int i = 0; i < m_array.length; i++) {
-            System.out.println(m_array[i]);
-        }
+        System.out.println(Arrays.toString(m_array));
     }
 }
